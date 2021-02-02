@@ -1,0 +1,32 @@
+﻿@model IEnumerable<SuperHeroesProject.Models.SuperHero>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<hr />
+<h1 style="text-align: center;">The Official Superhero Database</h1>
+<hr />
+
+<table class="table" style="text-align: center; border-bottom: 1px solid #dee2e6;">
+    <thead>
+        <tr>
+            <th>
+                Hero Name
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td style="border-bottom: 1px solid #dee2e6;"><a asp-action="Create">Create New Hero</a></td>
+        </tr>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    <a asp-action="Details" asp-route-id="@item.Id">@item.HeroName</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

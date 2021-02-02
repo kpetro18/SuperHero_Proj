@@ -1,0 +1,22 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div>
+    <center>
+        <h1>Welcome</h1>
+        <div class="row">
+            <h5 class="col-md-6">Add New Super Hero To List</h5>
+            <h5 class="col-md-6">View Super Hero List</h5>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <a asp-area="" asp-controller="Superhero" asp-action="Create">Click here to add a new Super Hero</a>
+            </div>
+            <div class="col-md-6">
+                <a asp-area="" asp-controller="Superhero" asp-action="Index">Click here to view Super Hero List</a>
+            </div>
+        </div>
+        <img src="/images/Original.jpg" />
+    </center>
+</div>
